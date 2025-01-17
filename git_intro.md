@@ -153,4 +153,27 @@ To https://github.com/jimpea/github_tutorial.git
 branch 'main' set up to track 'origin/main'.
 ```
 
-You can now look at this file here: <https://github.com/jimpea/github_tutorial>
+You can now look at this file here: <https://github.com/jimpea/github_tutorial>. You can continue to make changes locally and update Github:
+
+First commit all the changes that push to github:
+
+```bash
+(py11) PS W:\play\git_tutorial> git commit --all -m "Push the latest commit to github"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(py11) PS W:\play\git_tutorial> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 675 bytes | 56.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/jimpea/github_tutorial.git
+   aea0e26..518b220  main -> main
+```
+
+
