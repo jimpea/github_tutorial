@@ -108,7 +108,32 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
  ```
  
-As before, add the file to the staging and commit with a new commit message:
+As before, add the file to the staging and commit with a new commit message. The log now contains two entries:
+
+```bash
+(py11) PS W:\play\git_tutorial> git log
+commit 88da01221e911ba99c6f180fee83f78920a42ad4 (HEAD -> master)
+Author: Jpearson <j.pearson@gmail.com>
+Date:   Fri Jan 17 16:54:10 2025 +0000
+
+    Add a new commit pointing to see how the git log works
+
+commit e518385f4cb851661e26010dde458ee3c9123b34
+Author: Jpearson <j.pearson@gmail.com>
+Date:   Fri Jan 17 16:45:44 2025 +0000
+
+    Make initial file version
+```
+
+The git log provides a history of your file. You can revert all your changed to an earlier commit. In this way you retain controll over the files.
+
+Your repo can contain many files and sub folders.
+
+## Sharing Your Repo
+
+This is where GitHub comes in:
+
+Upload your new repository to your github account, make it public you can then share it with anyone. Follow the github instructions [here](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github#adding-a-local-repository-to-github-using-git).
 
 
 
