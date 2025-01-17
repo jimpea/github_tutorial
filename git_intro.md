@@ -135,13 +135,22 @@ This is where GitHub comes in:
 
 Upload your new repository to your github account, make it public you can then share it with anyone. Follow the github instructions [here](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github#adding-a-local-repository-to-github-using-git).
 
+I have added a new empty repo to github, now link this local repo with the new gitub repo
 
+```bash
+(py11) PS W:\play\git_tutorial> git remote add origin https://github.com/jimpea/github_tutorial.git
+(py11) PS W:\play\git_tutorial> git branch -M main
+(py11) PS W:\play\git_tutorial> git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 2.87 KiB | 81.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/jimpea/github_tutorial.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+```
 
-
-
-
-
-
-
-
-
+You can now look at this file here: <https://github.com/jimpea/github_tutorial>
