@@ -14,9 +14,9 @@ Download and run the installer from <https://git-scm.com/downloads/win>
 
 ## Use Git
 
-Many IDEs offer git installation, for instance RStudio and VScode, learn how to use this from the help offered in these environments. However, I think that you should start off using this from a command line (terminal).
+Many IDEs offer git integration, for instance RStudio and VScode, learn how to use this from the help offered in these environments. However, I think that you should start off using this from a command line (terminal).
 
-### Create a Repository 
+### Create a Repository
 
 Make a folder for your new repository, for instance on my desktop, I will make a new folder in my promdata -- I use the folder `play` for experiments (playing around):
 
@@ -67,9 +67,11 @@ This shows that the file `git-intro.md` has changed, but has not been commited y
 (py11) PS W:\play\git_tutorial> git add --all
 warning: in the working copy of 'git_intro.md', LF will be replaced by CRLF the next time Git touches it
 ```
+
 The file has now moved to the staging area:
 
 ```
+
 (py11) PS W:\play\git_tutorial> git status
 On branch master
 
@@ -175,5 +177,3 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/jimpea/github_tutorial.git
    aea0e26..518b220  main -> main
 ```
-
-
