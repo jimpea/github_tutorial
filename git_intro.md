@@ -178,5 +178,38 @@ To https://github.com/jimpea/github_tutorial.git
    aea0e26..518b220  main -> main
 ```
 
+## Using Revert asn Reset
 
-Temporary change
+Each entry into the git log carries a unique reference number. This is used when you want to go back to an earlier version of the repository. So, I shall add the curent version of this file to the repo and then list the last three commits:
+
+```bash
+W:\play\git_tutorial> git commit --all -m "Add section for Revert and Reset"
+...
+(base) PS W:\play\git_tutorial> git log --oneline -n 3
+c2b8db4 (HEAD -> main) Add section for Revert and Reset
+7c8f9b4 (origin/main) Revert "Remove explicit paths"
+56845e6 Add temporart line
+```
+
+Now revert to the previous commit 'Revert "Remove explicit paths"': this has the number c2b8db4. 
+
+```bash
+(base) PS W:\play\git_tutorial> git reset 7c8f9b4
+(base) PS W:\play\git_tutorial> git log --oneline -n 3
+7c8f9b4 (HEAD -> main, origin/main) Revert "Remove explicit paths"
+56845e6 Add temporart line
+d9339f2 Remove explicit paths
+```
+
+This retains the current state of the file, but moves the commit history back. This allows you to amend the current changes and commit again. If you want to remove all the changes to the file, add the `--hard` flag to the line like this: `git reset 7c8f9b4 --hard`.
+
+`get reset` performs the same task, but registers a new log entry. This ensures that the git commit history maintains coordination with the github archive.
+
+For more information see [here](https://www.freecodecamp.org/news/git-reverting-to-previous-commit-how-to-revert-to-last-commit/). This provides the following summary:
+
+> ## When to Use git reset and git revert
+> You should use git reset when working on a local repository with changes yet to be pushed remotely. This is because running this command after pulling changes from the remote repo will alter the commit history of the project, leading to merge conflicts for everyone working on the project.
+>
+> `git reset` is a good option when you realize that the changes being made to a particular local branch should be somewhere else. You can reset and move to the desired branch without losing your file changes.
+>
+> `git revert` is a good option for reverting changes pushed to a remote repository. Since this command creates a new commit, you can safely get rid of your mistakes without rearranging the commit history for everyone else.
