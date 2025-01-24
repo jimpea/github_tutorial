@@ -6,7 +6,6 @@
 - GitHub is a web service that hosts your repos. If you make your work public, then anyone can view and download your repo.
 - Astrea has a private GitHub account so that we can use this to host and distribute the repos within Astrea.
 - Host your public repos on GitHub for free, for instance mine is here: <https://github.com/jimpea>.
-- Astrea has a corporate (private) account here: <https://github.com/Astrea-Bioseparations>, you should not have access to this unless you have an Astrea GitHub account
 
 ## Install Git
 
@@ -21,20 +20,20 @@ Many IDEs offer git integration, for instance RStudio and VScode, learn how to u
 Make a folder for your new repository, for instance on my desktop, I will make a new folder in my promdata -- I use the folder `play` for experiments (playing around):
 
 ```bash
-(py11) PS W:\play> mkdir git_tutorial
+(py11) PS W:\play\> mkdir git_tutorial
 ```
 
 Move to this folder and make it into a git repo:
 
 ```bash
-(py11) PS W:\play> cd .\git_tutorial\
+(py11) PS W:\play\>cd git_tutorial
+(py11) PS W:\play\git_tutorial> cd .\git_tutorial\
 (py11) PS W:\play\git_tutorial> git init
-Initialized empty Git repository in //cam-svr01/promdata/jpearson/play/git_tutorial/.git/
 ```
+
 Make a new file, or copy one of your existing documents here -- I will use this document! List the contents of the folder to confirm:
 
 ```bash
-(py11) PS W:\play\git_tutorial> cp C:\Users\jpearson\Downloads\git_intro.md .
 (py11) PS W:\play\git_tutorial> ls
 
 
