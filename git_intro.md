@@ -6,7 +6,6 @@
 - GitHub is a web service that hosts your repos. If you make your work public, then anyone can view and download your repo.
 - Astrea has a private GitHub account so that we can use this to host and distribute the repos within Astrea.
 - Host your public repos on GitHub for free, for instance mine is here: <https://github.com/jimpea>.
-- Astrea has a corporate (private) account here: <https://github.com/Astrea-Bioseparations>, you should not have access to this unless you have an Astrea GitHub account
 
 ## Install Git
 
@@ -18,7 +17,7 @@ Many IDEs offer git integration, for instance RStudio and VScode, learn how to u
 
 ### Create a Repository
 
-Make a folder for your new repository, for instance on my desktop, I will make a new folder in my promdata -- I use the folder `play` for experiments (playing around):
+Make a folder for your new repository, for instance on my desktop, I will make a new folder in my `play` area -- I use this for experiments (playing around):
 
 ```bash
 (py11) PS W:\play> mkdir git_tutorial
@@ -61,7 +60,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-This shows that the file `git-intro.md` has changed, but has not been commited yet. Add this to the files that will be commited to the repo. *Note that git is set up to work with files made on linux systems which end all text lines with two characters: cursor return and line feed (think about how an old typewriter works). Windows only uses a single line feed charadcter to mark the end of a line. You can safely ignore this*
+This shows that the file `git-intro.md` has changed, but has not been committed yet. Add this to the files that will be committed to the repo. *Note that git is set up to work with files made on linux systems which end all text lines with two characters: cursor return and line feed (think about how an old typewriter works). Windows only uses a single line feed character to mark the end of a line. You can safely ignore this*
 
 ```bash
 (py11) PS W:\play\git_tutorial> git add --all
@@ -127,7 +126,7 @@ Date:   Fri Jan 17 16:45:44 2025 +0000
     Make initial file version
 ```
 
-The git log provides a history of your file. You can revert all your changed to an earlier commit. In this way you retain controll over the files.
+The git log provides a history of your file. You can revert all your changed to an earlier commit. In this way you retain control over the files.
 
 Your repo can contain many files and sub folders.
 
@@ -137,7 +136,7 @@ This is where GitHub comes in:
 
 Upload your new repository to your github account, make it public you can then share it with anyone. Follow the github instructions [here](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github#adding-a-local-repository-to-github-using-git).
 
-I have added a new empty repo to github, now link this local repo with the new gitub repo
+I have added a new empty repo to github, now link this local repo with the new github repo
 
 ```bash
 (py11) PS W:\play\git_tutorial> git remote add origin https://github.com/jimpea/github_tutorial.git
@@ -178,9 +177,9 @@ To https://github.com/jimpea/github_tutorial.git
    aea0e26..518b220  main -> main
 ```
 
-## Using Revert asn Reset
+## Using Revert asd Reset
 
-Each entry into the git log carries a unique reference number. This is used when you want to go back to an earlier version of the repository. So, I shall add the curent version of this file to the repo and then list the last three commits:
+Each entry into the git log carries a unique reference number. This is used when you want to go back to an earlier version of the repository. So, I shall add the current version of this file to the repo and then list the last three commits:
 
 ```bash
 W:\play\git_tutorial> git commit --all -m "Add section for Revert and Reset"
@@ -208,6 +207,7 @@ This retains the current state of the file, but moves the commit history back. T
 For more information see [here](https://www.freecodecamp.org/news/git-reverting-to-previous-commit-how-to-revert-to-last-commit/). This provides the following summary:
 
 > ## When to Use git reset and git revert
+>
 > You should use git reset when working on a local repository with changes yet to be pushed remotely. This is because running this command after pulling changes from the remote repo will alter the commit history of the project, leading to merge conflicts for everyone working on the project.
 >
 > `git reset` is a good option when you realize that the changes being made to a particular local branch should be somewhere else. You can reset and move to the desired branch without losing your file changes.
